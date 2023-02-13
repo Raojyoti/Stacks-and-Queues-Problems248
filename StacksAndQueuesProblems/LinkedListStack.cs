@@ -43,6 +43,33 @@ namespace StacksAndQueuesProblems
             temp.next = newNode;
             //Console.WriteLine("{0} is push into stack", data);
         }
+        public void Pop()
+        {
+            if(top==null)
+            {
+                return;
+            }
+            top = top.next;
+        }
+        public void Peek()
+        {
+            if(top==null)
+            {
+                Console.WriteLine("Here no element present in Stack ");
+                return;
+            }
+            Console.WriteLine("{0} is topmost element in stack", top.data);
+        }
+        public bool IsEmpty()
+        {
+            while(top!=null)
+            {
+                Peek();
+                Console.WriteLine("\n{0} element is deleted successfully....",top.data);
+                Pop();
+            }
+            return true;
+        }
         public void DisplayStackList()
         {
             if (top == null)

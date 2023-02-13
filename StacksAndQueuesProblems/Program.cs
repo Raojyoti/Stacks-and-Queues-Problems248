@@ -18,7 +18,13 @@ namespace StacksAndQueuesProblems
             {
                 Console.Clear();
                 Console.WriteLine("Please choose any options");
-                Console.WriteLine("1.CreateStack\n2.Push element into stack\n3.Display stack list\n10.Exit\n");
+                Console.WriteLine("1.CreateStack\n" +
+                    "2.Push element into stack\n" +
+                    "3.Display stack list\n" +
+                    "4.Pop element from stack\n" +
+                    "5.Top element in stack\n" +
+                    "6.Check stack is empty or not\n" +
+                    "10.Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -39,6 +45,26 @@ namespace StacksAndQueuesProblems
                     case 3:
                         Console.Clear();
                         listStack.DisplayStackList();
+                        Console.Write("\nPress any key to continue...... ");
+                        Console.ReadLine();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        listStack.Pop();
+                        Console.WriteLine("Element is deleted successfully....\n");
+                        Console.WriteLine("After deletions if you want to see how many elements present in Stacklist \n\nSo first Press any key to continue...\n\nAnd then select option 3 ");
+                        Console.ReadLine();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        listStack.Peek();
+                        Console.Write("\nPress any key to continue...... ");
+                        Console.ReadLine();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        listStack.IsEmpty();
+                        Console.Write("Is stack is empty? : {0}", listStack.IsEmpty());
                         Console.Write("\nPress any key to continue...... ");
                         Console.ReadLine();
                         break;
