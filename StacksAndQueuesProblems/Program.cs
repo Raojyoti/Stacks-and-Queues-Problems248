@@ -12,6 +12,7 @@ namespace StacksAndQueuesProblems
         static void Main(string[] args)
         {
             LinkedListStack listStack = new LinkedListStack();
+            LinkedListQueue queue = new LinkedListQueue();
             Console.WriteLine("Welcome to the Stack and Queues Problems");
             bool check = true;
             while (check)
@@ -24,7 +25,11 @@ namespace StacksAndQueuesProblems
                     "4.Pop element from stack\n" +
                     "5.Top element in stack\n" +
                     "6.Check stack is empty or not\n" +
-                    "10.Exit\n");
+                    "7.Create Queue\n" +
+                    "8.Enqueue element into queue\n" +
+                    "9.Display queue list\n" +
+                    "10.Top element in queue\n" +
+                    "11.Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -68,7 +73,33 @@ namespace StacksAndQueuesProblems
                         Console.Write("\nPress any key to continue...... ");
                         Console.ReadLine();
                         break;
+                    case 7:
+                        Console.Clear();
+                        queue.CreateQueue();
+                        Console.Write("\nPress any key to continue...... ");
+                        Console.ReadLine();
+                        break;
+                    case 8:
+                        Console.Clear();
+                        Console.Write("Enter the element to be enqueue into queue: ");
+                        int data1 = Convert.ToInt32(Console.ReadLine());
+                        queue.Enqueue(data1);
+                        Console.Write("\nPress any key to continue...... ");
+                        Console.ReadLine();
+                        break;
+                    case 9:
+                        Console.Clear();
+                        queue.DisplayQueueList();
+                        Console.Write("\nPress any key to continue...... ");
+                        Console.ReadLine();
+                        break;
                     case 10:
+                        Console.Clear();
+                        queue.TopElementInQueue();
+                        Console.Write("\nPress any key to continue...... ");
+                        Console.ReadLine();
+                        break;
+                    case 11:
                         Console.Clear();
                         break;
                     default:
