@@ -9,6 +9,7 @@ namespace StacksAndQueuesProblems
     public class LinkedListQueue
     {
         Node head;
+        Node tail;
         public void CreateQueue()
         {
             Console.WriteLine("Enter number of node wanted to inserted");
@@ -55,22 +56,18 @@ namespace StacksAndQueuesProblems
         }
         public void DequeueElement()
         {
-            if(head==null)
+            if (head == null)
             {
-                Console.WriteLine("Here Queue is empty so delection is not possible");
-                return;
-            }
-            if(head.next==null)
-            {
-                head = null;
+                Console.WriteLine("Queue is empty and Deletion is not possible");
                 return;
             }
             Node temp = head;
-            while (temp.next.next != null)
+            head = head.next;
+            if (head == null)
             {
-                temp = temp.next;
+                tail = null;
             }
-            temp.next=null;
+            Console.WriteLine("Deleted elements is {0}", temp.data);
         }
         public void DisplayQueueList()
         {
