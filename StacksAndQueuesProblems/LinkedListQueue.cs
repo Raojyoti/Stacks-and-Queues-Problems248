@@ -53,6 +53,25 @@ namespace StacksAndQueuesProblems
             }
             Console.WriteLine("{0} is topmost element in queue", head.data);
         }
+        public void DequeueElement()
+        {
+            if(head==null)
+            {
+                Console.WriteLine("Here Queue is empty so delection is not possible");
+                return;
+            }
+            if(head.next==null)
+            {
+                head = null;
+                return;
+            }
+            Node temp = head;
+            while (temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next=null;
+        }
         public void DisplayQueueList()
         {
             if(head==null)

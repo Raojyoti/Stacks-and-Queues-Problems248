@@ -29,7 +29,8 @@ namespace StacksAndQueuesProblems
                     "8.Enqueue element into queue\n" +
                     "9.Display queue list\n" +
                     "10.Top element in queue\n" +
-                    "11.Exit\n");
+                    "11.Deqnqueue element from queue\n" +
+                    "12.Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -100,6 +101,13 @@ namespace StacksAndQueuesProblems
                         Console.ReadLine();
                         break;
                     case 11:
+                        Console.Clear();
+                        queue.DequeueElement();
+                        Console.WriteLine("Element is deleted successfully....\n");
+                        Console.WriteLine("After deletions if you want to see how many elements present in Queuelist \n\nSo first Press any key to continue...\n\nAnd then select option 9 ");
+                        Console.ReadLine();
+                        break;
+                    case 12:
                         Console.Clear();
                         break;
                     default:
